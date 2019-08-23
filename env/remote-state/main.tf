@@ -1,7 +1,9 @@
-provider aws { }
+provider aws { 
+  region = "eu-central-1"
+}
 
 module "terraform-backend" {
-  source = "github.com/ElAntagonista/tf-rifiniti-modules/common/terraform-aws-rs"
+  source = "github.com/ElAntagonista/tf-rifiniti-modules/common/terraform-aws-rs/"
   s3_bucket_name = "tfrifiniti"
   dynamodb_table_name = "tfrifiniti"
 }
